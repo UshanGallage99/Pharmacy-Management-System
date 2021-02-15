@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-09T13:29:25 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EmployeeSalary1" pageWidth="421" pageHeight="595" columnWidth="381" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2aeac0ab-65b8-47a0-948c-d1bdd0d9bee0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="jasper"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[select *from salary]]>
+	</queryString>
+	<field name="EID" class="java.lang.String"/>
+	<field name="BasicSalary" class="java.lang.Double"/>
+	<field name="Epf" class="java.lang.Double"/>
+	<field name="Etf" class="java.lang.Double"/>
+	<field name="Totalsalary" class="java.lang.Double"/>
+	<group name="EID">
+		<groupExpression><![CDATA[$F{EID}]]></groupExpression>
+	</group>
+	<group name="BasicSalary">
+		<groupExpression><![CDATA[$F{BasicSalary}]]></groupExpression>
+	</group>
+	<group name="Epf">
+		<groupExpression><![CDATA[$F{Epf}]]></groupExpression>
+	</group>
+	<group name="Etf">
+		<groupExpression><![CDATA[$F{Etf}]]></groupExpression>
+	</group>
+	<group name="Totalsalary">
+		<groupExpression><![CDATA[$F{Totalsalary}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="85" y="0" width="195" height="40" uuid="0c1e24a2-0c48-4fac-b1ae-3f92f68562e9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Unicode MS" size="16" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Employee Salary]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="303" y="19" width="86" height="42" uuid="18a9141d-511b-43d6-a38d-413ede9a7072"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="260" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="10" width="170" height="30" uuid="df4f7f4d-8266-4f5e-85e3-351105438401"/>
+				<text><![CDATA[Employee ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="10" width="100" height="30" uuid="1327c00f-a405-44aa-a3a4-8ec7b8559c2f"/>
+				<textFieldExpression><![CDATA[$F{EID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="61" width="170" height="30" uuid="eb8e1419-f0e9-47cd-b52a-44dbb12c7859"/>
+				<text><![CDATA[Basic Salary]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="279" y="60" width="100" height="30" uuid="4ab56895-c8bd-498d-8479-7770cea0230b"/>
+				<textFieldExpression><![CDATA[$F{BasicSalary}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="110" width="170" height="30" uuid="9c92b47c-d06d-4fce-a45b-bb340567bb33"/>
+				<text><![CDATA[Epf]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="279" y="111" width="100" height="30" uuid="32451037-fe80-4653-a83e-38d79e61b78a"/>
+				<textFieldExpression><![CDATA[$F{Epf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="160" width="170" height="30" uuid="1805e278-7b2f-44ad-b1cd-fbcf68cd9c72"/>
+				<text><![CDATA[Etf]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="279" y="159" width="100" height="30" uuid="7500959b-8064-4165-8de6-e6f87be75f8d"/>
+				<textFieldExpression><![CDATA[$F{Etf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="211" width="170" height="30" uuid="84731d61-ede6-4426-8c0d-0b55eab3da70"/>
+				<text><![CDATA[Total salary]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="279" y="211" width="100" height="30" uuid="525fce4c-78d6-4913-a6e7-1b9b2fc79f7d"/>
+				<textFieldExpression><![CDATA[$F{Totalsalary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="236" y="6" width="145" height="20" uuid="bce0ac48-d576-4a02-beb5-343984840345"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Unicode MS"/>
+				</textElement>
+				<text><![CDATA[By Green Enterprises (Pvt)ltd]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <AnchorPane prefHeight="43.0" prefWidth="1600.0" style="-fx-background-color: #2E8B57;">
+         <children>
+            <Label fx:id="lblDate" layoutX="10.0" layoutY="3.0" prefHeight="22.0" prefWidth="182.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font name="Arial Unicode MS" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" alignment="CENTER" layoutX="1472.0" layoutY="3.0" prefHeight="17.0" prefWidth="122.0" text="Time" textFill="WHITE">
+               <font>
+                  <Font name="Arial Unicode MS" size="25.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutY="42.0" prefHeight="808.0" prefWidth="154.0" style="-fx-background-color: #2E8B57;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="84.0" layoutX="36.0" layoutY="374.0" onMouseClicked="#openManagementForm" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/commercial-development-management.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="CENTER" focusTraversable="false" layoutX="4.0" layoutY="380.0" onMouseClicked="#openManagementForm" opacity="0.3" prefHeight="118.0" prefWidth="146.0" style="-fx-background-color: black;" text="&#10;&#10;Management" textFill="WHITE">
+               <font>
+                  <Font name="Arial Unicode MS" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="btnChaneling1" fitHeight="65.0" fitWidth="67.0" layoutX="42.0" layoutY="231.0" onMouseClicked="#openChannelingForm" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/doctor-male.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnChaneling" alignment="CENTER" focusTraversable="false" layoutX="6.0" layoutY="218.0" onMouseClicked="#openChannelingForm" opacity="0.3" prefHeight="118.0" prefWidth="138.0" style="-fx-background-color: black;" text="&#10;&#10;Channeling" textFill="WHITE">
+               <font>
+                  <Font name="Arial Unicode MS" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="65.0" fitWidth="57.0" layoutX="45.0" layoutY="86.0" onMouseClicked="#openCashierForm" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/cash-register.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="CENTER" focusTraversable="false" layoutX="6.0" layoutY="75.0" onMouseClicked="#openCashierForm" opacity="0.3" prefHeight="118.0" prefWidth="138.0" style="-fx-background-color: black;" text="&#10;&#10;Pharmacy" textFill="WHITE">
+               <font>
+                  <Font name="Arial Unicode MS" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="61.0" layoutY="695.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/home.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnLogOut" layoutX="7.0" layoutY="754.0" onAction="#LogOut" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: #EEE8AA;" text="LOG OUT">
+               <font>
+                  <Font name="Arial Unicode MS" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root" layoutX="155.0" layoutY="42.0" prefHeight="808.0" prefWidth="1445.0" />
+   </children>
+</AnchorPane>

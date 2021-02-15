@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-06T23:18:09 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ABCD" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af323df8-ddba-41eb-982f-146d134cc938">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="jasper"/>
+	<queryString language="SQL">
+		<![CDATA[Select * From customer]]>
+	</queryString>
+	<field name="NIC" class="java.lang.String"/>
+	<field name="Name" class="java.lang.String"/>
+	<field name="Address" class="java.lang.String"/>
+	<field name="Contact" class="java.lang.String"/>
+	<group name="NIC">
+		<groupExpression><![CDATA[$F{NIC}]]></groupExpression>
+	</group>
+	<group name="Name">
+		<groupExpression><![CDATA[$F{Name}]]></groupExpression>
+	</group>
+	<group name="Address">
+		<groupExpression><![CDATA[$F{Address}]]></groupExpression>
+	</group>
+	<group name="Contact">
+		<groupExpression><![CDATA[$F{Contact}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="177" y="0" width="195" height="40" uuid="6989331f-9c76-4b20-9fda-cff9f9243fbc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Unicode MS" size="16" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Customer List]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="430" y="17" width="124" height="42" uuid="04d21939-ded0-4260-9fa9-51da13a44e40"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="2" width="100" height="30" uuid="6a1e5e05-4860-46af-a99c-82520efe2835"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="2" width="124" height="30" uuid="7d5cea21-ac54-417b-923b-690c248b834f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="2" width="100" height="30" uuid="f32178de-890b-42b4-9e12-032814b3d332"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="2" width="115" height="30" uuid="4ced6e13-8619-4257-b54e-f064ac9e723d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="59" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="13" width="100" height="30" uuid="dc13762e-bae8-41dc-a8bf-4fd586fff304"/>
+				<textFieldExpression><![CDATA[$F{NIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="13" width="150" height="30" uuid="c5ede698-89e2-4174-b319-50f3b98dca01"/>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="14" width="123" height="30" uuid="dd880ce1-89bd-49b7-afeb-a7b9706b9a87"/>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="12" width="100" height="30" uuid="05f182e6-de54-4f33-bcfb-982524ea8266"/>
+				<textFieldExpression><![CDATA[$F{Contact}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="411" y="29" width="145" height="20" uuid="eaab27d4-2c5c-4d0c-8a68-3b48e32029e4"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Unicode MS"/>
+				</textElement>
+				<text><![CDATA[By Green Enterprises (Pvt)ltd]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

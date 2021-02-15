@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-07T08:34:31 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Orders" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1e0f1f0-a5e6-4265-94d2-37f14930c37a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="jasper"/>
+	<queryString language="SQL">
+		<![CDATA[Select * from orders]]>
+	</queryString>
+	<field name="OrderID" class="java.lang.Integer"/>
+	<field name="OrderDate" class="java.lang.String"/>
+	<field name="CID" class="java.lang.String"/>
+	<group name="OrderID">
+		<groupExpression><![CDATA[$F{OrderID}]]></groupExpression>
+	</group>
+	<group name="OrderDate">
+		<groupExpression><![CDATA[$F{OrderDate}]]></groupExpression>
+	</group>
+	<group name="CID">
+		<groupExpression><![CDATA[$F{CID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="190" y="0" width="200" height="40" uuid="27cf0166-1ab5-41da-98ba-8943f7b63239"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Unicode MS" size="16" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Orders List]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="430" y="19" width="124" height="42" uuid="3ed545f8-c443-4480-bf56-0c0522215016"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="100" height="30" uuid="d7924669-ff62-48f5-b5d8-cbd377643d73"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Order ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="0" width="100" height="30" uuid="86d6000c-6111-403f-8ce3-469d8291fd6a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Order Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="0" width="100" height="30" uuid="608f8db9-da92-4031-8f84-dc6c9be82d97"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Customer ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="100" height="30" uuid="e64d11a0-803d-4d09-a377-be164ca5846e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{OrderID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="0" width="100" height="30" uuid="924f80e6-edac-48f4-8ac2-f2fe61035678"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{OrderDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="0" width="100" height="30" uuid="7c004cbb-aad0-4f8c-9ff6-5aca5b12de59"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="411" y="29" width="145" height="20" uuid="fa1456a2-394d-4b33-b80f-dcd745a0416c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Unicode MS"/>
+				</textElement>
+				<text><![CDATA[By Green Enterprises (Pvt)ltd]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

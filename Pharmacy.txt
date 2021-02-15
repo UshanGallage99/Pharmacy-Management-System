@@ -1,0 +1,94 @@
+drop database Pharmacy;
+create database Pharmacy;
+use Pharmacy;	
+
+CREATE TABLE Customer(
+	 NIC varchar(12)not null,
+	 Name varchar(100) not null,
+	 Address varchar(45) not null,
+	 Contact varchar(45) not null,
+	 constraint primary key(NIC),
+	 constraint name_address unique(Name,Address)
+	 );
+CREATE TABLE Orders(
+	OrderID INT(6),
+	OrderDate VARCHAR(10) NOT NULL,
+	CID VARCHAR(12),
+	CONSTRAINT PRIMARY KEY (OrderID),
+	CONSTRAINT FOREIGN Key (CID) REFERENCES Customer(NIC)
+);
+CREATE TABLE Item(
+	ItemCode VARCHAR(6) NOT NULL,
+	Discription VARCHAR(50) NOT NULL,
+	PackSize VARCHAR(20)NOT NULL,
+	UnitPrice DECIMAL(6,2)NOT NULL,
+	QtyOnHand INT(5)NOT NULL,
+	Location VARCHAR(20)NOT NULL,
+	CONSTRAINT PRIMARY KEY (ItemCode)
+);
+CREATE TABLE OrderDetail(
+	OrderID INT(6) NOT NULL,
+	ItemCode VARCHAR(6) NOT NULL,
+	OrderQty INT (10) NOT NULL,
+	CONSTRAINT PRIMARY KEY (OrderID,ItemCode),
+	CONSTRAINT FOREIGN Key (OrderID) REFERENCES Orders(OrderID),
+	CONSTRAINT FOREIGN Key (ItemCode) REFERENCES Item(ItemCode)
+	on delete cascade on update cascade
+);
+CREATE TABLE Employee(
+	 EmployeeID varchar(10)not null,
+	 EName varchar(100) not null,
+	 EAddress varchar(45) not null,
+	 EContact varchar(12) not null,
+	 EEmail varchar(45) not null,
+	 constraint primary key(EmployeeID),
+	 constraint name_address unique(EName,EAddress)
+	 );
+CREATE TABLE Salary(
+	 EID varchar(10)not null,
+	 BasicSalary double(10,2)not null,
+	 Epf double(5,2),
+	 Etf double(5,2),
+	 Totalsalary double(10,2),
+	 constraint primary key(EID),
+	 CONSTRAINT FOREIGN Key (EID) REFERENCES Employee(EmployeeID)
+	 );
+CREATE TABLE Shedule(
+	SID varchar(10) not null,
+	DoctorID varchar(10) not null,
+	SDate VARCHAR (10)  not null,
+	STime VARCHAR (10)  not null,
+	QtyOnHand INT(5)NOT NULL,
+	CONSTRAINT PRIMARY KEY (SID),
+	CONSTRAINT FOREIGN Key (DoctorID) REFERENCES Doctor(DoctorID)
+);
+CREATE TABLE Appointment(
+	AppointmentID int(5) NOT NULL,
+	CID VARCHAR(10) NOT NULL,
+	SID VARCHAR(10) NOT NULL,
+	Date VARCHAR (10)  NOT NULL,
+	Price decimal(10,2) NOT NULL,
+	Qty int(5) NOT NULL,  
+	CONSTRAINT PRIMARY KEY (CID,SID),
+	CONSTRAINT FOREIGN Key (CID) REFERENCES Customer(NIC),
+	CONSTRAINT FOREIGN Key (SID) REFERENCES Shedule(SID)
+);
+CREATE TABLE Doctor(
+	DoctorID varchar(10) not null,
+	DoctorName VARCHAR (10) NOT NULL,
+	Email VARCHAR (45) NOT NULL,
+	Contact VARCHAR (45) NOT NULL,
+	CONSTRAINT PRIMARY KEY (DoctorID)
+);
+
+desc Customer;
+desc Orders;
+desc Item;
+desc OrderDetail;
+
+
+
+
+ 
+ 
+ 

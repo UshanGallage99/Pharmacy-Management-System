@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<JFXTabPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="808.0" prefWidth="1445.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <tabs>
+      <Tab text="Doctors">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <TableView fx:id="bt" layoutX="50.0" layoutY="314.0" prefHeight="418.0" prefWidth="839.0">
+                     <columns>
+                        <TableColumn prefWidth="133.0" text="Doctor ID" />
+                        <TableColumn prefWidth="304.0" text="Doctor Name" />
+                        <TableColumn prefWidth="268.0" text="Email" />
+                        <TableColumn prefWidth="176.0" text="Contact" />
+                     </columns>
+                  </TableView>
+                  <JFXTextField labelFloat="true" layoutX="49.0" layoutY="37.0" prefHeight="38.0" prefWidth="836.0" promptText="Doctor ID" />
+                  <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="48.0" layoutY="99.0" prefHeight="38.0" prefWidth="834.0" promptText="Doctor Name">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtCustomerAddress" labelFloat="true" layoutX="49.0" layoutY="160.0" prefHeight="38.0" prefWidth="837.0" promptText="Email">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="50.0" layoutY="220.0" prefHeight="38.0" prefWidth="839.0" promptText="Contact">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="btnAddCustomer" layoutX="1154.0" layoutY="37.0" prefHeight="38.0" prefWidth="214.0" style="-fx-background-color: #2E8B57;" text="Add Doctor" textFill="WHITE" />
+                  <JFXButton fx:id="btnUpdateCustomer" layoutX="1156.0" layoutY="159.0" prefHeight="38.0" prefWidth="214.0" style="-fx-background-color: #2E8B57;" text="Update Doctor" textFill="WHITE" />
+                  <JFXButton fx:id="btnSearchCustomer" layoutX="1155.0" layoutY="95.0" prefHeight="38.0" prefWidth="214.0" style="-fx-background-color: #2E8B57;" text="Search Doctor" textFill="WHITE" />
+                  <JFXButton fx:id="btnDeleteCustomer" layoutX="1156.0" layoutY="223.0" prefHeight="38.0" prefWidth="214.0" style="-fx-background-color: #2E8B57;" text="Delete Doctor" textFill="WHITE" />
+                  <TableView layoutX="938.0" layoutY="314.0" prefHeight="348.0" prefWidth="438.0" style="-fx-background-color: #EEE8AA;">
+                    <columns>
+                      <TableColumn prefWidth="103.0" text="Shedule ID" />
+                      <TableColumn prefWidth="174.0" text="Date" />
+                        <TableColumn prefWidth="160.0" text="Time" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Appointment">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXComboBox layoutX="41.0" layoutY="26.0" prefHeight="38.0" prefWidth="160.0" promptText="Customer ID" />
+                  <Label layoutX="249.0" layoutY="27.0" prefHeight="31.0" prefWidth="169.0" text="Customer Name :">
+                     <font>
+                        <Font name="Arial Unicode MS" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox layoutX="40.0" layoutY="97.0" prefHeight="38.0" prefWidth="164.0" promptText="Shedule ID" />
+                  <Label layoutX="422.0" layoutY="27.0" prefHeight="31.0" prefWidth="344.0" text="Ushan Gallage" textFill="#0a8001">
+                     <font>
+                        <Font name="Arial Unicode MS" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField layoutX="249.0" layoutY="98.0" prefHeight="38.0" prefWidth="705.0" promptText="Discription" text="Doctor ID">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField layoutX="250.0" layoutY="153.0" prefHeight="38.0" prefWidth="705.0" promptText="Pack Size" text="Date">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField layoutX="250.0" layoutY="212.0" prefHeight="38.0" prefWidth="705.0" promptText="Unit Price" text="Time">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField layoutX="251.0" layoutY="270.0" prefHeight="38.0" prefWidth="705.0" promptText="Location" text="Price">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label layoutX="1171.0" layoutY="17.0" prefHeight="31.0" prefWidth="166.0" text="Appointment ID :">
+                     <font>
+                        <Font name="Arial Unicode MS" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1337.0" layoutY="17.0" prefHeight="31.0" prefWidth="80.0" text="100" textFill="#0a8001">
+                     <font>
+                        <Font name="Arial Unicode MS" size="20.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="1151.0" layoutY="473.0" prefHeight="218.0" prefWidth="259.0" style="-fx-background-color: #D3D3D3;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="-1.0" layoutY="1.0" prefHeight="32.0" prefWidth="260.0" text="Total" textFill="#f20808">
+                           <font>
+                              <Font name="Arial Unicode MS" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-6.0" layoutY="86.0" prefHeight="44.0" prefWidth="265.0" text="2450.00" textFill="#f20808">
+                           <font>
+                              <Font name="Arial Unicode MS" size="29.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="1151.0" layoutY="146.0" prefHeight="218.0" prefWidth="259.0" style="-fx-background-color: #D3D3D3;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="32.0" prefWidth="260.0" text="Shedule Wise Qty">
+                           <font>
+                              <Font name="Arial Unicode MS" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutY="41.0" prefHeight="30.0" prefWidth="259.0" text="100">
+                           <font>
+                              <Font name="Arial Unicode MS" size="25.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField alignment="CENTER" layoutX="13.0" layoutY="130.0" prefHeight="38.0" prefWidth="233.0" promptText="Qty">
+                           <font>
+                              <Font name="Arial Unicode MS" size="20.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton fx:id="btnAddItem1" layoutX="1172.0" layoutY="382.0" prefHeight="38.0" prefWidth="214.0" style="-fx-background-color: #2E8B57;" text="Add To List" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDeleteItem1" layoutX="1179.0" layoutY="724.0" prefHeight="38.0" prefWidth="214.0" style="-fx-background-color: #FFA07A;" text="Save Appointment">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <TableView layoutX="371.0" layoutY="353.0" prefHeight="351.0" prefWidth="676.0" style="-fx-border-color: black;">
+                     <columns>
+                        <TableColumn prefWidth="93.0" text="Shedule ID" />
+                        <TableColumn prefWidth="105.0" text="Doctor ID" />
+                        <TableColumn prefWidth="170.0" text="Date" />
+                        <TableColumn prefWidth="161.0" text="Time" />
+                        <TableColumn prefWidth="144.0" text="Amount" />
+                     </columns>
+                  </TableView>
+                  <JFXButton fx:id="btnUpdateItem1" layoutX="835.0" layoutY="726.0" prefHeight="38.0" prefWidth="214.0" style="-fx-background-color: #2E8B57;" text="Remove Appointment" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSearchItem2" layoutX="599.0" layoutY="726.0" prefHeight="38.0" prefWidth="214.0" style="-fx-background-color: #2E8B57;" text="Clear All" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <TableView layoutX="40.0" layoutY="355.0" prefHeight="348.0" prefWidth="278.0" style="-fx-background-color: #EEE8AA; -fx-border-color: black;">
+                     <columns>
+                        <TableColumn prefWidth="128.0" text="Shedule ID" />
+                        <TableColumn prefWidth="149.0" text="Doctor ID" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>

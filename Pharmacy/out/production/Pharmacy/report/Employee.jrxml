@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-09T14:32:29 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Employee" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="972af453-6086-41e4-85ee-899afe37b921">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="jasper"/>
+	<queryString language="SQL">
+		<![CDATA[select * from employee]]>
+	</queryString>
+	<field name="EmployeeID" class="java.lang.String"/>
+	<field name="EName" class="java.lang.String"/>
+	<field name="EAddress" class="java.lang.String"/>
+	<field name="EContact" class="java.lang.String"/>
+	<field name="EEmail" class="java.lang.String"/>
+	<group name="EmployeeID">
+		<groupExpression><![CDATA[$F{EmployeeID}]]></groupExpression>
+	</group>
+	<group name="EName">
+		<groupExpression><![CDATA[$F{EName}]]></groupExpression>
+	</group>
+	<group name="EAddress">
+		<groupExpression><![CDATA[$F{EAddress}]]></groupExpression>
+	</group>
+	<group name="EContact">
+		<groupExpression><![CDATA[$F{EContact}]]></groupExpression>
+	</group>
+	<group name="EEmail">
+		<groupExpression><![CDATA[$F{EEmail}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="209" y="0" width="195" height="40" uuid="75c3881f-c7a1-41a7-b777-bfb0aa2705e4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Unicode MS" size="16" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Employee List]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="430" y="28" width="124" height="42" uuid="3f7595ed-b63f-4305-afed-6c6873863cd0"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="0" width="100" height="30" uuid="1cacaa34-038f-4f1e-b991-bd3bba87ed25"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Employee ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="100" height="30" uuid="1cf8ac5d-f08d-45bd-a225-aabcfa089516"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="0" width="100" height="30" uuid="b3922640-71c4-45fd-9e0f-0f2f632cb0d8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="79" height="30" uuid="e9e9ad77-b5b9-4a6e-b752-2d13cc75e41a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="449" y="0" width="100" height="30" uuid="4a42f77d-1e66-4404-aad0-89a99896624a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="0" width="100" height="30" uuid="6fa6bc3d-beb3-49dd-88f0-914921f488bb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{EmployeeID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="100" height="30" uuid="46757cb3-c4a9-4541-8c1d-1392b6334dfe"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{EName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="0" width="100" height="30" uuid="f207a041-fc88-480e-901e-ec288150e020"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{EAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="349" y="1" width="80" height="30" uuid="45462683-e695-40ad-af09-83ecd843b3b9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{EContact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="1" width="100" height="30" uuid="e5633ed2-3cd2-4a6b-9891-28066e86d7d4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{EEmail}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="411" y="29" width="145" height="20" uuid="d4226d6b-eda1-4a98-9792-391fbafc1ba1"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Unicode MS"/>
+				</textElement>
+				<text><![CDATA[By Green Enterprises (Pvt)ltd]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

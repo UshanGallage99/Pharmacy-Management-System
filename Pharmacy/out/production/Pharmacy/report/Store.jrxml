@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-07T07:59:35 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Store" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1b1049e8-16eb-4d58-885e-e500fb8a0378">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="jasper"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM item]]>
+	</queryString>
+	<field name="ItemCode" class="java.lang.String"/>
+	<field name="Discription" class="java.lang.String"/>
+	<field name="PackSize" class="java.lang.String"/>
+	<field name="UnitPrice" class="java.math.BigDecimal"/>
+	<field name="QtyOnHand" class="java.lang.Integer"/>
+	<field name="Location" class="java.lang.String"/>
+	<group name="ItemCode">
+		<groupExpression><![CDATA[$F{ItemCode}]]></groupExpression>
+	</group>
+	<group name="Discription">
+		<groupExpression><![CDATA[$F{Discription}]]></groupExpression>
+	</group>
+	<group name="PackSize">
+		<groupExpression><![CDATA[$F{PackSize}]]></groupExpression>
+	</group>
+	<group name="UnitPrice">
+		<groupExpression><![CDATA[$F{UnitPrice}]]></groupExpression>
+	</group>
+	<group name="QtyOnHand">
+		<groupExpression><![CDATA[$F{QtyOnHand}]]></groupExpression>
+	</group>
+	<group name="Location">
+		<groupExpression><![CDATA[$F{Location}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="177" y="0" width="195" height="40" uuid="5be2684d-6c85-4665-a8ec-c55e8f1ed728"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Unicode MS" size="16" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Store List]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="430" y="17" width="124" height="42" uuid="034f276f-caf9-4db4-8876-4f49505009fb"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="50">
+			<staticText>
+				<reportElement x="-11" y="0" width="81" height="30" uuid="ea6a82b9-df11-4073-91db-30d5aae363b0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ItemCode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="0" width="100" height="30" uuid="eda1ad76-2701-43e3-ad73-6c1306470503"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Discription]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="0" width="70" height="30" uuid="6cc22113-00f4-4269-b780-182f990e40ba"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[PackSize]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="0" width="80" height="30" uuid="920e691c-f129-481d-9e20-79e5548d65ef"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[UnitPrice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="0" width="60" height="30" uuid="61bef135-b1ee-44ac-a733-0d5bdd992d67"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[QtyOnHand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="0" width="84" height="30" uuid="085c0e84-dc82-423a-9d55-345c87c463b6"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Location]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="0" width="80" height="30" uuid="5c122d52-9658-4071-bd95-dbe96c6e5310"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ItemCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="100" height="30" uuid="4fdfc47d-fed9-4619-9b20-b5b3db486f8a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Discription}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="204" y="0" width="70" height="30" uuid="5764c53d-39fd-4539-8019-85866050f20f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PackSize}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="0" width="80" height="30" uuid="b4b22d4f-76d3-4e59-8a3c-bccf1f6d286f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{UnitPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="0" width="60" height="30" uuid="61bd6049-cb35-48f0-bbc8-0c1eb2f6c589"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{QtyOnHand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="0" width="84" height="30" uuid="641e4aa3-d3c9-40b6-ae29-56d1cb938a13"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Location}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="411" y="29" width="145" height="20" uuid="2ddd7a4e-6792-4601-abd8-413124213041"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Unicode MS"/>
+				</textElement>
+				<text><![CDATA[By Green Enterprises (Pvt)ltd]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
